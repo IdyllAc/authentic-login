@@ -104,7 +104,6 @@ function checkNotAuthenticated(req, res, next) {
     next()
 }
 
-
 // listen on port 3000
 app.listen(3000)
 
