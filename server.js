@@ -1,6 +1,12 @@
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config()
 }
+
+// curl --request GET \
+// --url "https://api.github.com/aythen-login" \
+// --header "Authorization: Bearer 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" \
+// --header "X-GitHub-Api-Version: 2022-11-28"
+
 // Importing libraries that we installed using npm
 const express = require('express')
 const app = express()
