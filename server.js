@@ -2,11 +2,6 @@ if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config()
 }
 
-// curl --request GET \
-// --url "https://api.github.com/aythen-login" \
-// --header "Authorization: Bearer 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" \
-// --header "X-GitHub-Api-Version: 2022-11-28"
-
 // Importing libraries that we installed using npm
 const express = require('express')
 const app = express()
@@ -26,6 +21,7 @@ initializePassport(
 
  // Set Views
 app.set('views', 'views')
+
 //  app.engine('ejs', ejs.renderFile);
 app.set('view engine', 'ejs')
 app.use(express.urlencoded({ extended: false }))
@@ -40,12 +36,6 @@ app.use(passport.initialize())
 app.use(passport.session())
 app.use(methodOverride('_method'))
 
-// app.use(cors({
-//     origin: "http://localhost:3000",
-//     methods: "GET, POST, PUT, DELETE",
-//     credentials: true,
-// })
-// );
 
 
 

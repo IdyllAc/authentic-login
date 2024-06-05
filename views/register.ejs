@@ -33,7 +33,7 @@
         font-weight: bolder;
     }
     
-    .card {
+    /* .card {
         width: 30%;
         height: 35%;
         display: block;
@@ -42,7 +42,7 @@
         padding-bottom: 0;
         border: 2px solid whitesmoke  ;
         background-color: darkblue;
-    }
+    } */
 
     input {
         width: 15rem;
@@ -78,31 +78,25 @@
          padding-bottom: 0.7em ;
          font-size: 0.9em;
      }
-    
+
 </style>
 </head>
-
 <body>
-    <!-- <h1>Hello There </h1> -->
     <h1 style="display: flex; color: whitesmoke;justify-content: center; padding-top: 40px; padding-right: 20px; font-size: xx-large;">مرحباً بك على منصة تطبيق إيديلك</style=></h1>
     <p style="color: whitesmoke;"> Welcome in <strong>IdyllAc </strong>App</p>
                 
     <p style="background-color:green">Still unsubscribed so far?
         Fill the form.</p>
 
-      
-
     <h1 style="font-family: cursive;">Register here:</h1>
 
-    <!-- <div class="card"> -->
-    <!-- <div class="card-body"> -->
     <form action="/register" method="post">
        <div class="row">
-           <% if (messages.error) { %>
+           <!-- <% if (messages.error) { %>
           <div class="alert alert-danger">
               <strong><%= messages.error %></strong>
           </div>
-              <% } %>
+              <% } %> -->
               <h1 class="mb-3 h3">Register</h1>
        </div>
       
@@ -122,23 +116,22 @@
         </div>
         <br>
         <div>
-            <button type="submit" class="btn btn-primary btn-block mb-4">Register/Sign up</button>
+            <button type="submit" class="btn btn-primary btn-block mb-4">Register</button>
         </div>
         </div>
         <br>
 
         <h3><p style="background-color:green">Already have an account?
             <a href="login" style="color: orange;">Login</a></p></h3>
-
     </form>
 
     <footer class="footer">
         <span class="nowrap">Copyrights &copy; <time id="year"></time></span>
         <span class="nowrap">IdyllAc</span>
-
     </footer>
   </div>
-<script src="https://kit.fontawesome.com/283a7ae800.js" crossorigin="anonymous"></script>
-</body>
 
+<script src="https://kit.fontawesome.com/283a7ae800.js" crossorigin="anonymous"></script>
+
+</body>
 </html>
