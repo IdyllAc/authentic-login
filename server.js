@@ -46,7 +46,7 @@ app.get('/', checkAuthenticated, (req, res) => {
  })
 
 app.get('/login', checkNotAuthenticated, (req, res) => {
-    res.render('login.ejs')
+    res.render('login.html')
 })
 
 
@@ -57,7 +57,7 @@ app.post('/login', checkNotAuthenticated, passport.authenticate('local', {
 }))
 
 app.get('/register', checkNotAuthenticated, (req, res) => {
-    res.render('register.ejs')
+    res.render('register.html')
 })
 
 app.post('/register', checkNotAuthenticated, async (req, res) => {
