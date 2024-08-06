@@ -40,13 +40,13 @@ app.use(methodOverride('_method'))
 
 
 app.get('/', checkAuthenticated, (req, res) => {
-    // data={email:'test@test.com', adress:'noida', skills:['node js','php','java']}
+    
     res.render('index', { name: req.user.name });
-    // console.warn('req.params.name');
+   
  })
 
 app.get('/login', checkNotAuthenticated, (req, res) => {
-    res.render('login.html')
+    res.render('login.php')
 })
 
 
@@ -57,7 +57,7 @@ app.post('/login', checkNotAuthenticated, passport.authenticate('local', {
 }))
 
 app.get('/register', checkNotAuthenticated, (req, res) => {
-    res.render('register.html')
+    res.render('register.php')
 })
 
 app.post('/register', checkNotAuthenticated, async (req, res) => {
