@@ -7,7 +7,7 @@
   <title>Login EJS</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> 
 <style>
     body {
        margin: 0;
@@ -49,15 +49,15 @@
          border-radius: 5px;
    }
 
-    .container {
+    /* .container {
         position:static;
         margin-top: 0;
         display:contents;
         width: 70%;
         height: 70%;
         background-color: blueviolet;
-    }
-    .card {
+    } */
+    /* .card {
         width: 30%;
         height: 35%;
         display: block;
@@ -66,14 +66,14 @@
         padding-bottom:0 ;
         border: 2px solid whitesmoke  ;
         background-color: darkblue;
-    }
-    .card-body {
+    } */
+    /* .card-body {
       background-color: gray;
       width: 100%;
       height: 100%;
     display:column;
     padding-bottom: 0;
-    }
+    } */
 
 
     .row {
@@ -109,22 +109,20 @@
 	 }
        </style>                              
        </head>
-       <body>  
-        <p style="margin-top: 15vh; background-color: green">Do you have account? sign in:</p>   
-        <h1 style="font-family: cursive;">Sign in</h1>
+       <body> 
+        <p style="margin-top: 15vh; background-color: green">Do you have account signin?</p> 
+        <h1 class="mb-3 h3">login</h1>  
 
-          <!-- <div class="card"> -->
-        <!-- <div class="card-body"> -->
-         <form action="/login" method="post">
-         <div class="row">
+           <% if (messages.error) { %> 
+            <div class="row"> 
+           <%= messages.error %>
+           <div class="alert alert-danger"></div>
+           <% } %>
+         </div>
+        <h1 style="font-family: cursive;">Sign in here</h1>
 
-        <% if (messages.error) { %> 
-          <div class="alert alert-danger">
-            <strong><%= messages.error %></strong>
-          </div>
-          <% } %>
-        </div>
-        
+
+         <form action="/login" method="POST">
     <div>
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required></input>
@@ -132,29 +130,27 @@
     <div>
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required></input>
+        <br>
     </div>
     <br>
-    <div>
-        <button type="submit">login</button>
    
+        <button type="submit">login</button>
     </form> 
-      </div> 
-        
-      </div>
+     
     <br>   
     
-      <p style="background-color: green;">Registred yet? Clic here to
-       <a href="register.html" style= "color: orange;">Register</a></p>
+      <p style="background-color: green;">Do not registred yet? Clic here to
+       <a href="register.ejs" style= "color: orange;">Register</a></p>
                                      
-        <footer class="footer">
+      <footer class="footer">
             <span class="nowrap">Copyrights &copy; <time id="year"></time></span>
             <span class="nowrap">IdyllAc</span>  
-        </footer>
+        </footer> 
 
     <script src="https://kit.fontawesome.com/283a7ae800.js" crossorigin="anonymous"></script>
 
-  </body>
-</html>
+   </body>
+</html> 
 
 
 
